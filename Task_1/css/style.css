@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #6f8fb3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 600px;
+    min-height: 500px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: start; /* кнопки сверху, не тянутся по высоте */
+}
+
+.button-column {
+    display: grid;
+    gap: 10px;
+}
+
+.error {
+    min-height: 18px;
+    color: #d32f2f;
+    font-size: 12px;
+}
+
+/* список: фиксируем высоту, чтобы он скроллился внутри */
+#pairList {
+    width: 100%;
+    height: 320px;      /* высота окна списка на десктопе */
+    overflow-y: auto;   /* если опций много, то появится скролл */
+}
+
+

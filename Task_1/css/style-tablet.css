@@ -1,0 +1,33 @@
+/* Планшеты/небольшие окна: уменьшаем колонку кнопок */
+@media (max-width: 1100px) and (min-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;        /* контейнер подстраивается под экран */
+        max-width: 700px;   /* но не растягивается слишком сильно */
+        height: auto;       /* убираем фиксированную высоту */
+        padding: 20px;
+    }
+
+    /* окно списка делаем чуть ниже */
+    #pairList {
+        height: 280px;
+    }
+
+    /* колонка кнопок становится уже */
+    .row {
+        grid-template-columns: 1fr 160px;
+    }
+
+    .button-column {
+        gap: 8px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+}

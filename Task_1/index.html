@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic JavaScript and HTML Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-tablet.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
+</head>
+<body>
+<div class="container">
+    <h1>Test</h1>
+<!--label привязывется к полю input по id -> клик на текст ставит курсор в это поле-->
+    <label for="pairInput">Name/Value Pair</label>
+    <div class="row">
+        <input id="pairInput" type="text" placeholder="Name=Value">
+        <button id="addBtn">Add</button>
+    </div>
+
+    <p class="error" id="errorMessage"></p>
+
+    <label for="pairList">Name/Value Pair List</label>
+    <div class="row">
+<!--   multiple - чтобы выбрать несколько пар одновременно (по условию задания):-->
+<!--   When the ‘Delete’ button is pressed all selected items in the listbox will be deleted.-->
+        <select id="pairList" multiple></select>
+
+        <div class="button-column">
+            <button id="sortNameBtn">Sort by Name</button>
+            <button id="sortValueBtn">Sort by Value</button>
+            <button id="deleteBtn">Delete</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

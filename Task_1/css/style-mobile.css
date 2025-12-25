@@ -1,0 +1,47 @@
+/* Телефоны: перестраиваем layout в одну колонку */
+@media (max-width: 520px) {
+
+    /* страница не по центру, а сверху — так удобнее на телефоне */
+    body {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    /* контейнер занимает всю ширину экрана */
+    .container {
+        width: 100%;
+        height: auto;          /* убираем фиксированную высоту */
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    /* все row перестраиваются в одну колонку */
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    /* список пар */
+    #pairList {
+        width: 100%;
+        height: 240px;        /* фиксированное окно со скроллом */
+        max-height: 240px;
+        overflow-y: auto;
+    }
+
+    /* кнопки сортировки и удаления */
+    .button-column {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    /* кнопки крупнее — удобнее нажимать пальцем */
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* текст ошибки немного крупнее */
+    .error {
+        font-size: 13px;
+    }
+}

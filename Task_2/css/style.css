@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+/* ссылки (Back) */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+/* общий стиль заголовков страниц */
+h1 {
+    margin: 0 0 16px;
+    font-size: 22px;
+}
+
+/* ==== Buttons (единый стиль) === */
+
+button,
+.btn {
+    display: inline-block;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #111827;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.06s ease, background 0.15s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: #f1f5f9;
+}
+
+button:active,
+.btn:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* широкая кнопка (90% ширины, центр) */
+.wide-btn {
+    display: block;
+    width: 90%;
+    margin: 16px auto 0;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* === index.html — Users grid (2 в ряд) === */
+
+.users {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.users-card {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    display: grid;
+    gap: 10px;
+}
+
+/* === user-details.html — User info (вся инфа) + posts grid (5 в ряд) === */
+
+/* главный список пользователя */
+.user-info-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+/* пункты списка */
+.user-info-list > li {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #fafafa;
+}
+
+/* вложенный список (address/geo/company) */
+.user-info-list > li > ul {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 10px;
+}
+
+/* кнопка загрузки постов (по ТЗ 90% ширины по центру) */
+#loadPostsBtn {
+    display: block;
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* posts grid: 5 карточек в ряд по ТЗ */
+.posts-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* карточка поста (краткая инфа: title + кнопка) */
+.post-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 160px;
+}
+
+.post-card h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* кнопка поста на всю ширину карточки */
+.post-details-btn {
+    width: 100%;
+    margin-top: auto;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* === post-details.html — Post info (сверху) + comments grid (4 в ряд) ==== */
+
+/* верхняя плашка (Back to user link) */
+.details-header {
+    margin-bottom: 12px;
+}
+
+/* Back to user ссылка как кнопка */
+.back-link {
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+}
+
+/* карточка деталей поста */
+.post-details-card {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.post-details-card h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+/* контейнер комментариев (для отступа сверху) */
+#comments {
+    margin-top: 16px;
+}
+
+/* Comments grid: 4 в ряд по ТЗ */
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* карточка комментария */
+.comment-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    display: grid;
+    gap: 8px;
+}
+
+.comment-card h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.comment-email {
+    margin: 0;
+    font-size: 13px;
+    color: #2563eb;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.comment-card p {
+    margin: 0;
+    font-size: 14px;
+}
